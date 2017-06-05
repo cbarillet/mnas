@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-  res.send('MNA is up!');
+  res.send('MNAS is up with node version ' + JSON.stringify(process.version, null, 4));
 });
 
 app.listen(3333, function () {
