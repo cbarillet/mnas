@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var nodeVersion = JSON.stringify(process.versions, null, 4);
+var nodeVersion = (process && process.versions) ? JSON.stringify(process.versions, null, 4) : 'process.versions unaivalable.';
 
 app.get('/', function (req, res) {
   res.send('MNAS is up with ' + nodeVersion);
